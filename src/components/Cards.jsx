@@ -3,7 +3,7 @@ import { Bookmark } from "lucide-react";
 
 const Cards = () => {
   return (
-    <div className="card w-80 rounded-lg bg-amber-50 h-[450px] m-8">
+    <div className="card w-80 rounded-lg bg-amber-50 h-[450px] m-8 flex flex-col justify-around">
       <div className="top flex justify-between p-4">
         <div>
           <img
@@ -14,15 +14,34 @@ const Cards = () => {
 
         <div className="flex justify-center items-center bg-blue-950 text-white px-3 rounded-md border-none gap-2">
           <button>Save </button>
-          <Bookmark size={20}/>
+          <Bookmark size={20} />
         </div>
       </div>
 
-      <div className="middle">
-        <div className="flex gap-2 items-center w-3/4 p-2">
-            <h1 className="font-bold text-blue-950 text-xl">Meta</h1>
-            <span className="text-xs text-gray-400">5 days ago</span>
+      <div className="middle flex flex-col justify-between p-4">
+        <div className="flex items-baseline gap-2 w-3/4 p-2">
+          <h1 className="font-bold text-blue-950 text-2xl">Meta</h1>
+          <p className="text-gray-400 text-sm">5 days ago</p>
         </div>
+        <div className="flex flex-col gap-2">
+          <p className="job-role text-lg p-2 bg-blue-950 rounded-md text-white">
+            Front End Developer
+          </p>
+
+          <div className="flex gap-2">
+            <p className="tag-1 text-sm bg-blue-100 inline px-4 py-2 rounded text-blue-950 font-semibold">
+              Full Time
+            </p>
+            <p className="tag-1 text-sm bg-blue-100 inline px-4 py-2 rounded text-blue-950 font-semibold">
+              $50 / Hour
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="bottom flex justify-between p-4">
+          <button className="bg-blue-950 text-white font-semibold px-4 py-2 rounded">Apply Now</button>
       </div>
     </div>
   );
